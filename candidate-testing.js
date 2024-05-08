@@ -48,9 +48,9 @@ function gradeQuiz(candidateAnswers) {
   for (let i = 0; i < correctAnswers.length; i++){
    if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
      passGrade++;
-     console.log("Correct answers!  ${innerGrade} out of 5!");
+     console.log("Correct answers!  ${passGrade} out of 5!");
    } else {
-     console.log("Incorrect answers! ${innerGrade} out of 5!");
+     console.log("Incorrect answers! ${passGrade} out of 5!");
    }
   }
 
