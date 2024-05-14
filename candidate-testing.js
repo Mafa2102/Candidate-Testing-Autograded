@@ -47,9 +47,9 @@ function gradeQuiz(candidateAnswers) {
   for (let i = 0; i < correctAnswers.length; i++){
    if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
      passGrade++;
-     console.log(`Correct answers! ${passGrade} out of 5!`);
+     console.log(`Correct answer! ${passGrade} out of 5!`);
    } else {
-     console.log(`Incorrect answers! ${passGrade} out of 5!`);
+     console.log(`Incorrect answer! ${passGrade} out of 5!`);
    }
   }
 
@@ -67,7 +67,7 @@ if (grade >= 80) {
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-  console.log("Welcome" + candidateName + "!");
+  console.log("Welcome " + candidateName + "!");
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
