@@ -23,7 +23,7 @@ let correctAnswers = [
   "true", // Idx 1
   "40", // Idx 2
   "Trajectory", // idx 3
-  "3"
+  "3" // idx4
 ];
 let candidateAnswers = [];
 
@@ -31,7 +31,6 @@ let candidateAnswers = [];
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
   candidateName = input.question("What is your full name?");
-  console.log("Welcome" + candidateName + "!");
 }
 
 function askQuestion() {
@@ -48,9 +47,9 @@ function gradeQuiz(candidateAnswers) {
   for (let i = 0; i < correctAnswers.length; i++){
    if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
      passGrade++;
-     console.log("Correct answers!  ${passGrade} out of 5!");
+     console.log(`Correct answers! ${passGrade} out of 5!`);
    } else {
-     console.log("Incorrect answers! ${passGrade} out of 5!");
+     console.log(`Incorrect answers! ${passGrade} out of 5!`);
    }
   }
 
@@ -68,7 +67,7 @@ if (grade >= 80) {
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-   console.log();
+  console.log("Welcome" + candidateName + "!");
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
