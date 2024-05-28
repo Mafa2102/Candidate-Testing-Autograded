@@ -12,11 +12,11 @@ let candidateAnswer = "";
 
 //TODO: Variables for Part 2
 let questions = [
-  "Question 1: Who was the first American woman in space? ", // Idx0
-  "Question 2: True or false: 5 kilometer == 5000 meters? ", // Inx1
-  "Question 3: (5 + 3)/2 * 10 = ? ", // Idx2
-  "Question 4: Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ", // Idx3
-  "Question 5: What is the minimum crew size for the ISS? " // Idx4
+  "Who was the first American woman in space? ", // Idx0
+  "True or false: 5 kilometer == 5000 meters? ", // Inx1
+  "(5 + 3)/2 * 10 = ? ", // Idx2
+  "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ", // Idx3
+  "What is the minimum crew size for the ISS? " // Idx4
 ];
 let correctAnswers = [
   "Sally Ride", // Idx 0
