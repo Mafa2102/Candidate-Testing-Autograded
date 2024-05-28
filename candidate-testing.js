@@ -12,11 +12,11 @@ let candidateAnswer = "";
 
 //TODO: Variables for Part 2
 let questions = [
-  "Who was the first American woman in space? ", // Idx0
-  "True or false: 5 kilometer == 5000 meters? ", // Inx1
-  "(5 + 3)/2 * 10 = ? ", // Idx2
-  "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ", // Idx3
-  "What is the minimum crew size for the ISS? " // Idx4
+  "Question 1: Who was the first American woman in space? ", // Idx0
+  "Question 2: True or false: 5 kilometer == 5000 meters? ", // Inx1
+  "Question 3: (5 + 3)/2 * 10 = ? ", // Idx2
+  "Question 4: Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ", // Idx3
+  "Question 5: What is the minimum crew size for the ISS? " // Idx4
 ];
 let correctAnswers = [
   "Sally Ride", // Idx 0
@@ -30,7 +30,7 @@ let candidateAnswers = [];
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-  candidateName = input.question("What is your full name?");
+  candidateName = input.question("What is your full name? ");
 }
 
 function askQuestion() {
@@ -44,23 +44,23 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
   let passGrade = 0;
-  for (let i = 0; i < correctAnswers.length; i++){
-   if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
-     passGrade++;
-     console.log(`Correct answer! ${passGrade} out of 5!`);
-   } else {
-     console.log(`Incorrect answer! ${passGrade} out of 5!`);
-   }
+  for (let i = 0; i < correctAnswers.length; i++) {
+    console.log("\n<<< " + questions[i] + ">>>");
+    if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
+      passGrade++;
+      console.log(`Your answer ${candidateAnswers[i]} is the correct answer! You got ${passGrade} out of 5!`);
+    } else {
+      console.log(`Your answer ${candidateAnswers[i]} is incorrect! The correct answer is ${correctAnswers[i]}. \nYou got ${passGrade} out of 5!`);
+    }
   }
 
   let grade = 0;  //TODO 3.2 use this variable to calculate the candidates score.
-grade = (passGrade/questions.length)*100;
-if (grade >= 80) {
-  console.log("Congratulations! You passed the test!");
-} else {
-  console.log("The test is failed! Please try again!");
-}
-
+  grade = (passGrade / questions.length) * 100;
+  if (grade >= 80) {
+    console.log(`\nCongratulations! You passed the test with ${grade}% correct answers!`);
+  } else {
+    console.log(`\nThe test is failed! \n${grade}% is a failing score. Please try again!`);
+  }
   return grade;
 }
 
